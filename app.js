@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import foodRouter from "./routes/foodRoutes.js";
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // JNkOvzbwhle4bfSu
 // mongodb+srv://<db_username>:<db_password>@cluster0.ffvd8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
@@ -22,6 +23,6 @@ app.use(express.json());
 
 app.use(foodRouter);
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is running...");
 });
